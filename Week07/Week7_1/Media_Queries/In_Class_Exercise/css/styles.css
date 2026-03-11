@@ -117,7 +117,12 @@ header a {
   }
 
   .menu {
+    display: none;
     flex-direction: column;
+  }
+
+  .show {
+    display: block;
   }
 
   .menu li {

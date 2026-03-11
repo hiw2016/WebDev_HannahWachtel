@@ -1,0 +1,170 @@
+/* Global Styles */
+
+/* take into account borders and padding in our set dimensions of any BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* zero out annoying margins */
+html,
+body {
+  margin: 0;
+}
+
+/* Scale img to fit their parent contianer element */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* desktop first styling */
+/* JUMBOTRON */
+
+div.hero {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  width: 50%;
+  padding: 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(30, 87, 153, 1) 0%,
+    rgba(125, 185, 232, 0) 100%
+  );
+}
+
+button,
+a.info {
+  padding: 0.75rem 2rem;
+  border: 2px solid black;
+  border-radius: 0.75rem;
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  /* transitions get defined HERE at the starting state */
+  transition: all 1s ease;
+  min-width: 10rem;
+}
+
+button:hover,
+a.info:hover {
+  background-color: magenta;
+}
+
+/* GALLERY */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thumb {
+  position: relative;
+  flex: 0 0 30%;
+  /* flex grow, flex shrink, flex-basis
+    flex-grow: 0; don't grow to fill space completely, stay the flex basis size
+    flex-grow: 1; grow to fill space completely at the same rate as all of the other elements, stay the flex basis size
+    flex-grow: 2; grow to fill space completely at 2x the rate of other elements, stay the flex basis size
+    flex-basis - think of this as another way to define width;
+    */
+  overflow: hidden;
+  margin: 1.5rem auto;
+}
+
+/* prepare our img transform initial state */
+.thumb img {
+  transform: scale(1);
+  transform: rotate(0deg);
+  transition: all 1s ease;
+}
+
+.thumb:hover img {
+  transform: scale(1.5) rotate(-20deg);
+}
+
+.mask {
+  /* COVER */
+  position: absolute;
+  /* cover the parent element */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* CENTER */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Transition stuff */
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.mask h2 {
+  margin: 0;
+}
+
+.mask p {
+  font-style: italic;
+}
+
+.thumb:hover .mask {
+  opacity: 1;
+}
+
+/* set up initial text scale for transforms and transitions */
+.thumb .mask h2,
+.thumb .mask p,
+.thumb .mask a {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s ease-in-out;
+}
+
+.thumb:hover .mask h2,
+.thumb:hover .mask p,
+.thumb:hover .mask a {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* MEDIA QUERIES */
+/* desktop first = biggest to smallest with overrides */
+
+/* Tablet size = classic ipad dims */
+@media screen and (max-width: 1024px) {
+  .hero article {
+    width: 80%;
+    top: 50%;
+  }
+
+  .thumb {
+    flex-basis: 45%;
+  }
+}
+
+/* Smaller than an ipad classic = mobile */
+@media screen and (max-width < 768px) {
+  .hero article {
+    width: 100%;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 12px;
+  }
+}
