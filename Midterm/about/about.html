@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script type="text/javascript">
+      //   hamburger menu
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("mobile-menu")
+          .addEventListener("click", toggleShow);
+      });
+
+      function toggleShow() {
+        var menu = document.getElementById("menu");
+        console.log(menu.classList);
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="brand"><a href="../index.html">Hannah's Baked Goods</a></h1>
+      <span class="mobile-menu" id="mobile-menu">&#8801;</span>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="../gallery/gallery.html">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="../order/order.html">Order</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="about-page">
+      <section class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hi! I’m Hannah. Ever since I was little, I’ve found joy in the
+          kitchen, whether that was baking, cooking, or helping with the
+          dishes. Baking has always felt like magic to me, and for as long as I
+          can remember, it’s been my favorite way to show love and creativity.
+        </p>
+        <p>
+          Still, like a lot of people, I wasn’t sure if I could turn that
+          passion into something real. I baked on the side, baking for fun and
+          occasionally gifting treats to neighbors. I started taking
+          commissions for birthday cakes, cupcakes for baby showers, and more.
+          What started as a few orders here and there quickly grew into
+          something so much more.
+        </p>
+        <p>
+          I’ve poured my heart into every creation, and I’m so grateful for the
+          support and love I’ve received along the way. When I’m not in the
+          kitchen, you can probably find me using my creativity in other ways,
+          either in graphic design or traditional art. Thank you for being
+          here. I can’t wait to bake for you!
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

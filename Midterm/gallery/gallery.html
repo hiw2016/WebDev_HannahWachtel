@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script type="text/javascript">
+      //   hamburger menu
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("mobile-menu")
+          .addEventListener("click", toggleShow);
+      });
+
+      function toggleShow() {
+        var menu = document.getElementById("menu");
+        console.log(menu.classList);
+        menu.classList.toggle("show");
+      }
+
+      function scrollRow(rowId, amount) {
+        document.getElementById(rowId).scrollBy({
+          left: amount,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="brand"><a href="../index.html">Hannah's Baked Goods</a></h1>
+      <span class="mobile-menu" id="mobile-menu">&#8801;</span>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../order/order.html">Order</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Gallery</h2>
+      <p class="description">
+        Scroll through each row to browse cakes, cookies, and cupcakes.
+      </p>
+
+      <h2>Cakes</h2>
+      <div class="gallery-row">
+        <button class="gallery-arrow left" type="button" onclick="scrollRow('cakes', -320)">
+          &#8249;
+        </button>
+        <div class="gallery-container" id="cakes">
+          <div class="gallery-thumb">
+            <img src="../img/cake1.jpeg" alt="Custom cake design" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cake2.jpeg" alt="Decorated celebration cake" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cake3.jpeg" alt="Layer cake" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cake4.jpeg" alt="Birthday cake" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cake5.jpeg" alt="Custom bakery cake" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cake6.jpeg" alt="Celebration cake details" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cake7.jpg" alt="Floral cake" />
+          </div>
+        </div>
+        <button class="gallery-arrow right" type="button" onclick="scrollRow('cakes', 320)">
+          &#8250;
+        </button>
+      </div>
+
+      <h2>Cookies</h2>
+      <div class="gallery-row">
+        <button class="gallery-arrow left" type="button" onclick="scrollRow('cookies', -320)">
+          &#8249;
+        </button>
+        <div class="gallery-container" id="cookies">
+          <div class="gallery-thumb">
+            <img src="../img/cookies1.JPG" alt="Decorated cookies" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cookies2.jpeg" alt="Custom cookie set" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cookies3.jpeg" alt="Seasonal cookies" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cookies4.jpeg" alt="Holiday cookies" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cookies5.jpeg" alt="Mitten cookies" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cookies6.jpeg" alt="Decorative sugar cookies" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cookies7.jpeg" alt="Assorted custom cookies" />
+          </div>
+        </div>
+        <button class="gallery-arrow right" type="button" onclick="scrollRow('cookies', 320)">
+          &#8250;
+        </button>
+      </div>
+
+      <h2>Cupcakes / Cups</h2>
+      <div class="gallery-row">
+        <button class="gallery-arrow left" type="button" onclick="scrollRow('cupcakes', -320)">
+          &#8249;
+        </button>
+        <div class="gallery-container" id="cupcakes">
+          <div class="gallery-thumb">
+            <img src="../img/cupcakes1.jpeg" alt="Floral cupcakes" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cupcakes2.jpeg" alt="Patriotic cupcakes" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cupcakes3.jpeg" alt="Cupcake arrangement" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cups1.jpeg" alt="Decorated cupcakes on display" />
+          </div>
+          <div class="gallery-thumb">
+            <img src="../img/cups2.jpeg" alt="Cupcake assortment" />
+          </div>
+        </div>
+        <button class="gallery-arrow right" type="button" onclick="scrollRow('cupcakes', 320)">
+          &#8250;
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

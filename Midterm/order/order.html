@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script type="text/javascript">
+      //   hamburger menu
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("mobile-menu")
+          .addEventListener("click", toggleShow);
+      });
+
+      function toggleShow() {
+        var menu = document.getElementById("menu");
+        console.log(menu.classList);
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="brand"><a href="../index.html">Hannah's Baked Goods</a></h1>
+      <span class="mobile-menu" id="mobile-menu">&#8801;</span>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="../gallery/gallery.html">Gallery</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="#">Order</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contact">
+        <h2>Order Inquiry</h2>
+        <form action="https://formspree.io/f/xjgpgooj" method="POST">
+          <p class="description">
+            Fill out the form below with as many details as you can, and I will
+            get back to you about availability, pricing, and design options.
+          </p>
+
+          <div class="row">
+            <div class="field">
+              <label for="name" class="label-lg">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="input-lg"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="email" class="label-lg">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="input-lg"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="phone" class="label-lg">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="input-lg" />
+            </div>
+
+            <div class="field">
+              <label for="event-date" class="label-lg">Event Date</label>
+              <input
+                type="date"
+                id="event-date"
+                name="event_date"
+                class="input-lg"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="date" class="label-lg">Date Needed By</label>
+              <input type="date" id="date" name="date" class="input-lg" />
+            </div>
+
+            <div class="field">
+              <label for="servings" class="label-lg"
+                >Approximate Servings</label
+              >
+              <input
+                type="number"
+                id="servings"
+                name="servings"
+                class="input-lg"
+                min="1"
+                placeholder="12"
+              />
+            </div>
+          </div>
+
+          <div class="message-area">
+            <label for="dessert-type" class="label-lg">Dessert Type</label>
+            <select
+              id="dessert-type"
+              name="dessert_type"
+              class="input-lg"
+              required
+            >
+              <option value="">Select one</option>
+              <option value="cake">Cake</option>
+              <option value="cupcakes">Cupcakes</option>
+              <option value="cookies">Cookies</option>
+              <option value="cake-cupcakes">Cake and Cupcakes</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="message-area">
+            <label for="occasion" class="label-lg">Occasion / Event Type</label>
+            <input
+              type="text"
+              id="occasion"
+              name="occasion"
+              class="input-lg"
+              placeholder="Birthday, baby shower, wedding, holiday, etc."
+            />
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="flavor" class="label-lg">Flavor Ideas</label>
+              <input
+                type="text"
+                id="flavor"
+                name="flavor"
+                class="input-lg"
+                placeholder="Vanilla, chocolate, lemon, red velvet..."
+              />
+            </div>
+
+            <div class="field">
+              <label for="budget" class="label-lg">Budget Range</label>
+              <input
+                type="text"
+                id="budget"
+                name="budget"
+                class="input-lg"
+                placeholder="$50-$100"
+              />
+            </div>
+          </div>
+
+          <fieldset class="message-area choice-group">
+            <legend class="label-lg">Design Details</legend>
+            <label class="choice-option"
+              ><input type="checkbox" name="design_details" value="floral" />
+              Floral</label
+            >
+            <label class="choice-option"
+              ><input type="checkbox" name="design_details" value="seasonal" />
+              Seasonal</label
+            >
+            <label class="choice-option"
+              ><input
+                type="checkbox"
+                name="design_details"
+                value="character-theme"
+              />
+              Character / themed</label
+            >
+            <label class="choice-option"
+              ><input type="checkbox" name="design_details" value="elegant" />
+              Elegant / minimalist</label
+            >
+            <label class="choice-option"
+              ><input
+                type="checkbox"
+                name="design_details"
+                value="custom-colors"
+              />
+              Custom</label
+            >
+          </fieldset>
+
+          <div class="message-area">
+            <label for="colors" class="label-lg"
+              >Colors / Theme / Inspiration</label
+            >
+            <textarea
+              id="colors"
+              name="theme_details"
+              class="message"
+              placeholder="Share colors, theme, decorations, wording, or inspiration photos you want me to match."
+              required
+            ></textarea>
+          </div>
+
+          <div class="message-area">
+            <label for="allergies" class="label-lg"
+              >Allergies or Dietary Notes</label
+            >
+            <textarea
+              id="allergies"
+              name="allergies"
+              class="message short-message"
+              placeholder="List any allergies, dietary restrictions, or ingredient concerns."
+            ></textarea>
+          </div>
+
+          <div class="message-area">
+            <label for="message" class="label-lg"
+              >Anything Else I Should Know?</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              class="message short-message"
+              placeholder="Add delivery notes, preferred pickup time, special requests, or any extra details."
+            ></textarea>
+          </div>
+
+          <div class="button-bar">
+            <button class="btn" type="submit">Send Order Inquiry</button>
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New bakery order inquiry from {{name}}"
+          />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Sacramento&display=swap");
+
+:root {
+  --c-bg: #fffaf2;
+  --c-text: #5f4a37;
+  --c-accent: #9b785c;
+  --c-btn-hov: #eeddc1;
+  --c-bg-btn: #f0c4c3;
+  --c-btn-hov-2: #e08c99;
+
+  --ff-heading: "Sacramento", cursive;
+  --ff-body: "Alice", serif;
+}
