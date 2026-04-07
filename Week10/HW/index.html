@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Objects Lesson</title>
+  </head>
+  <body>
+    <h1>Open the Console to see your output!</h1>
+
+    <script>
+      // Your JavaScript goes here
+      // Step 1: Create an object called `book` with these properties:
+      //   - title        (string  — pick any book you like)
+      //   - author       (string)
+      //   - pages        (number)
+      //   - isAvailable  (boolean — set to true)
+
+      const book = {
+        title: 'The Secret History',
+        author: 'Donna Tartt',
+        pages: 559,
+        isAvailable: true,
+      }
+
+      // Step 2: Log the title using dot notation.
+      console.log(book.title)
+
+      // Step 3: Log the author using bracket notation.
+      console.log(book['author'])
+
+      // Step 4: Add a new property called `genre` (any genre you like).
+      book.genre = 'Dark Academia'
+
+      // Step 5: Update isAvailable to false.
+      book.isAvailable = false
+
+      // Step 6: Add a method called `describe` that logs:
+      //   "Title by Author — X pages"
+      //   Use this.title, this.author, and this.pages
+      book.describe = function () {
+        console.log(
+          this.title + ' by ' + this.author + ' — ' + this.pages + ' pages',
+        )
+      }
+
+      // Step 7: Call book.describe()
+      book.describe()
+
+      // Step 8: Use Object.keys() to log all the property names.
+      console.log(Object.keys(book))
+    </script>
+  </body>
+</html>
