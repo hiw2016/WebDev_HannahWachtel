@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cormorant+Garamond:wght@400;500;600;700&family=Parisienne&display=swap');
+
+:root {
+  --c-paper: #fffdf2;
+  --c-cream: #f3ebd8;
+  --c-lace: #efe2d5;
+  --c-rose: #dca5b5;
+  --c-blush: #f6d8df;
+  --c-mauve: #a77d6d;
+  --c-wine: #5b342f;
+  --c-moss: #596343;
+  --c-ink: #3f302c;
+  --c-shadow: rgba(91, 52, 47, 0.18);
+
+  --ff-script: 'Parisienne', cursive;
+  --ff-display: 'Cormorant Garamond', serif;
+  --ff-body: 'Alice', serif;
+}

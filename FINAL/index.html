@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hannah Wachtel | Romantic Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav
+          class="navbar navbar-expand-lg custom-navbar"
+          aria-label="Main navigation"
+        >
+          <div class="container-fluid px-0">
+            <a class="navbar-brand" href="./index.html">Hannah Wachtel</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainMenu"
+              aria-controls="mainMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="mainMenu"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./work/index.html">Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about/index.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact/index.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero-section position-relative">
+          <img
+            class="hero-flower hero-flower-left"
+            src="./img/flower.png"
+            alt=""
+          />
+          <img
+            class="hero-flower hero-flower-right"
+            src="./img/flower.png"
+            alt=""
+          />
+          <img class="hero-bow" src="./img/pinkBow1.png" alt="" />
+
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-5">
+              <h1>Hannah Wachtel's Portfolio</h1>
+              <p class="hero-copy">
+                This is a curated look at my journey through fine art, digital
+                illustration, and design. Welcome to my portfolio. Explore a
+                collection of works using traditional mediums and digital tools.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a class="btn custom-btn" href="./work/index.html"
+                  >View My Work</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="hero-collage">
+                <img
+                  class="collage-img collage-main"
+                  src="./img/trad4.jpeg"
+                  alt="Traditional artwork by Hannah Wachtel"
+                />
+                <img
+                  class="collage-img collage-small top"
+                  src="./img/graphicDesign6.png"
+                  alt="Graphic design sample by Hannah Wachtel"
+                />
+                <img
+                  class="collage-img collage-small bottom"
+                  src="./img/digital5.PNG"
+                  alt="Digital artwork by Hannah Wachtel"
+                />
+                <img class="collage-locket" src="./img/locket.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./js/site.js"></script>
+  </body>
+</html>

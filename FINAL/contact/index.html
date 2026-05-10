@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Hannah Wachtel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav
+          class="navbar navbar-expand-lg custom-navbar"
+          aria-label="Main navigation"
+        >
+          <div class="container-fluid px-0">
+            <a class="navbar-brand" href="../index.html">Hannah Wachtel</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainMenu"
+              aria-controls="mainMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="mainMenu"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../work/index.html">Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about/index.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="contact-section contact-page text-center">
+          <img src="../img/ribbonDivider.png" alt="" class="contact-divider" />
+          <h1>Contact</h1>
+          <p class="subpage-copy mx-auto">
+            Reach out for professional inquiries.
+          </p>
+
+          <form class="contact-form mx-auto">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="name">Name</label>
+                <input
+                  class="form-control"
+                  id="name"
+                  type="text"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">Email</label>
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Type message here"
+                ></textarea>
+              </div>
+            </div>
+            <button class="btn custom-btn mt-4" type="submit">
+              Send Message
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
